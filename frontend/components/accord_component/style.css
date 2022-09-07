@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    color: #444;
+    font-family: sans-serif;
+    line-height: 1;
+    font-weight: 400;
+}
+
+
+/*  ACCORDION COMPONENT */
+.accordion {
+    font-size: 1.6rem;
+    width: 1000px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+.item-1, .item-2, .item-3, .item-4, .item-5 {
+    transition: all 0.3s;
+    cursor: pointer;
+    border-top: 4px solid rgba(0, 0, 0, 0.0);
+    box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.1);
+    padding: 2.4rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 2.4rem;
+    row-gap: 3.2rem;
+    align-items: center;
+}
+.icon-down {
+    width: 24px;
+    height: 24px;
+}
+.number {
+    color: #ced4da;
+}
+.number,
+.text {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+.hidden-box {
+    grid-column: 2;
+    display: none;
+}
+.hidden-box p {
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+}
+.hidden-box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-left: 1.8rem;
+    line-height: 1.6;
+}
+.open {
+    border-top: 4px solid #087f5b;
+}
+.open .hidden-box {
+    display: block;
+}
+.open .number, .open .text, .open .icon-down {
+    color: #087f5b;
+}
